@@ -1,33 +1,31 @@
 import React from "react";
-import styled from "styled-components";
 
+import styled, { ThemeProvider } from "../lib/styled-components";
+import { theme } from "../lib/theme";
 import Header from "./Header";
 import Meta from "./Meta";
 
-const MyButton = styled.button<{ huge?: boolean }>`
-  background: red;
-  font-size: ${props => (props.huge ? "100px" : "50px")};
-  span {
-    font-size: 100px;
-  }
+const StyledPage = styled.div`
+  background: white;
+  color: ${props => props.theme.black};
+`;
+
+const Inner = styled.div`
+  max-width: ${props => props.theme.red};
+  margin: 0 auto;
+  padding: 2rem;
 `;
 
 class Page extends React.Component {
   render() {
     return (
-      <div>
-        <Meta />
-        <Header />
-        <MyButton>
-          Click Me
-          <span>💩</span>
-        </MyButton>
-        <MyButton huge>
-          Click Me
-          <span>💩</span>
-        </MyButton>
-        {this.props.children}
-      </div>
+      <ThemeProvider theme={theme}>
+        <StyledPage>
+          <Meta />
+          <Header />
+          <Inner>{this.props.children}</Inner>
+        </StyledPage>
+      </ThemeProvider>
     );
   }
 }
