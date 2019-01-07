@@ -7,8 +7,9 @@ const {
   default: styled,
   css,
   keyframes,
+  injectGlobal,
   ThemeProvider
 } = styledComponents as ThemedStyledComponentsModule<ThemeInterface>;
 
-export { css, keyframes, ThemeProvider };
+export { css, keyframes, ThemeProvider, injectGlobal };
 export default styled;
