@@ -8,4 +8,4 @@ hooks:
 
 generate:
   - generator: typescript-client
-    output: ./generated/prisma-client/
+    output: ./src/generated/prisma-client/
