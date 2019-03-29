@@ -6,7 +6,7 @@ import { DocumentNode } from "graphql";
 import {
   makePrismaClientClass,
   BaseClientOptions,
-  Model
+  // Model
 } from "prisma-client-lib";
 import { typeDefs } from "./prisma-schema";
 
@@ -386,12 +386,12 @@ export type Boolean = boolean;
  * Model Metadata
  */
 
-export const models: Model[] = [
-  {
-    name: "User",
-    embedded: false
-  }
-];
+// export const models: Model[] = [
+//   {
+//     name: "User",
+//     embedded: false
+//   }
+// ];
 
 /**
  * Type Defs
@@ -399,7 +399,7 @@ export const models: Model[] = [
 
 export const Prisma = makePrismaClientClass<ClientConstructor<Prisma>>({
   typeDefs,
-  models,
+  // models,
   endpoint: `${process.env["PRISMA_ENDPOINT"]}`
 });
 export const prisma = new Prisma();

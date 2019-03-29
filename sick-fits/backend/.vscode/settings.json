@@ -2,5 +2,8 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#b64569",
     "titleBar.inactiveBackground": "#ac1f4bcc"
-  }
+  },
+  "cSpell.words": [
+    "deets"
+  ]
 }
